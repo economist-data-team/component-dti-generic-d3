@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "strict/d3",
+    "strict-react"
+  ]
+}

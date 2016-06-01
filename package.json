@@ -102,6 +102,7 @@
   "dependencies": {
     "@economist/utility-dti-parsemarginarray": "^1.0.0",
     "d3": "^3.5.17",
+    "eslint-config-strict": "^8.6.0",
     "react": "^0.14.8||^15.0.0"
   },
   "devDependencies": {

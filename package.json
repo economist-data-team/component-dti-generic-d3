@@ -2,9 +2,9 @@
   "name": "@economist/component-dti-generic-d-3",
   "version": "0.0.0-development",
   "description": "A generic component for working with D3",
-  "homepage": "https://github.com/economist-components/component-dti-generic-d-3",
+  "homepage": "https://github.com/economist-components/component-dti-generic-d3",
   "bugs": {
-    "url": "https://github.com/economist-components/component-dti-generic-d-3/issues"
+    "url": "https://github.com/economist-components/component-dti-generic-d3/issues"
   },
   "license": "MIT",
   "files": [

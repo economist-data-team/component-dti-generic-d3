@@ -2,10 +2,17 @@ sudo: false
 language: node_js
 cache:
   directories:
-    - node_modules
+  - node_modules
 node_js:
-  - '4'
-  - stable
-after_success: >-
-  travis-after-all && npm run semantic-release && npm run pages -- --repo
+- 4.3
+- stable
+before_install:
+- npm i -g npm
+script:
+- npm t
+after_success: travis-after-all && npm run semantic-release && npm run pages -- --repo
   https://${GH_TOKEN}@github.com/economist-components/component-dti-generic-d3.git
+env:
+  global:
+  - secure: oCApA69wMPFJ9rAXv8l2g1sW/KJeaRfMJCbtM7/tybzTcJgZbPRClVpnMe+gAdbmhqBvPu5+NZUKR2UuwEMZoSf4YLRWsR5oub63R+f+JdTUXZuvAeitNKVJ3YT6befbgUOvBccyW8nUwGf3Bap+hWYlBXECBQgo9m6qifmkeoaTLLUewCH92ome9g2jukJmiYlq97yUVRJgRxtXZFH9dfU0CatH2Gp8Vnj/DKGFfF9S7FK3AjvRw4cyoa2VqeYaAgm5DK8u4R0+hXSoojHeTRcj6zKY0AYHViZR/LIDp9JPYNWhCE+vQUJXYwOXaSpO12vAL5/YJB6Ll3neDiX9Kfny/qDk0bdtnpJgBZAmfLLex0oZYcjkI9A58YRyQVzLFWd19SEwXFg6dF4kXqTJ4J04u8/4dOwJ2f5w6gRTo8hJi4GHTLJdpU2flZjKETV8Fr10ejvK0LStoYIibOyCSSbvMYXklGPVRzqs6UZkyM5cLR+n65mNmlCyggsIgtGj9C4iTLQjt3gVZqD9DtuakTNcOyE+kx905nPpcSuaoP2AzQ/UmCW2QRzUrriaEzN7IGY04z5+pGBLPfnFuPsceZrW4Af+91FkaiyD8DRVWVcPUl1/WJSWX+ZE3x6wF5RmQl7ZtXPckJKgHpkeJ0iz3agXWXy8RkAqfiXeWErJ6cA=
+  - secure: W1faIS116IcMNDr+CaPyHD2GX0xS6f73hYUfX7szYK8tzKUlqOMKO8wCgTaXB1NOS0Zmjcot7Cek5rDSISeDngdWrfdRHpNa+hpCbAUto5RK2gcK42VNdwrvDeiHV89O4yAxR+SkJYTwD06Cu8p6ymJKczdoKuJk+l1J+KXNFry75fUWqZd3qjUfI3wFV+k0nZSSWVOiz+q01FivHOgoKUKohXbPQlL/I3ynqFGmZgDzyoGsdrMiE6dD4ZcvydU8jrSnl7Gu0IkxvoUrvIyjHSeaT5tkep2Ys5fUvGdzr82EGoY069Ta6WrJWJtEA9k8Vn/K3j8hEsRGkR4rG8Kdw7UZ+ADUJEW+jeOdL+qvgiENBM2sH1Wl0fM1w1tyTVCmkeihBR/hgJMy0Os69MgI1gLsscjdT6hzyCxtvNZxCfQnpYqTB2v+hgFqzRN4MkYS6n7nZieTrYX8HgFGtcvlB7hA1z/KEWA7lfXi7NYNxVLHn9uD831AiSVfD4qukCJeF9WqjqpMLCKU2uE03vPQ/8qxGW6RX+qKf70ympN210epWRZ3AkdZj6CnlG0hKoMWhUwEKN+XWsZ1bCPAo9d8tnCnrEKV0VgauBGBDuOAHMib1sGm4aFK9tfSzlIpvSLZqtJ0mrG8T71noFdAE8sSGtMjfw2hsL2zn5ifU62L/A8=

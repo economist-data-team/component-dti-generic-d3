@@ -2,6 +2,7 @@
   "extends": [
     "strict",
     "strict-react",
+    "strict/d3",
     "strict/test"
   ]
 }
